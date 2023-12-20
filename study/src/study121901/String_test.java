@@ -24,13 +24,13 @@ public class String_test {
 		for(int i=0; i<split.length; i++)
 			System.out.println(split[i]);
 		// # 기준으로 한줄씩 출력
-		// 2당신이라ㅣ는 단어 대신 "그대"라고 바꾸어서 출력
+		// 2당신이라는 단어 대신 "그대"라고 바꾸어서 출력
 		String temp = song.replaceAll("당신","그대");
 		System.out.println(temp);
-		// 3. 크리스마스를 여어로 변경하여 출력하세요.
+		// 3. 크리스마스를 영어로 변경하여 출력하세요.
 		temp = song.replaceAll("크리스마스","christmas");
 		System.out.println(temp);
-		// 4. 세번째#뒤의 가사가 무엇인지 출력하세요.
+		// 4. 세번째# 뒤의 가사가 무엇인지 출력하세요.
 		System.out.println(split[3]); 
 	}
 }
