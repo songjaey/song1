@@ -18,6 +18,8 @@ public class java_method {
 	}
 	static void buy(buyer 재영) {
 		while(true) {
+			
+			System.out.println("\n============목록===========\n");
 			view();
 			System.out.print("물건의 번호를 입력하세요(0-구매중단) : ");
 			int num = scan.nextInt();
@@ -25,11 +27,14 @@ public class java_method {
 			if( !(num >= 1 && num <= mart_list.length) ) {
 				continue;
 			}
-			재영.basket_sizeUp();
-			재영.basket[재영.cnt] = mart_list[num-1];
-			재영.cnt++;
-			
-			
+			재영.basket_add(mart_list[num-1]);
+//			재영.basket[재영.cnt] = mart_list[num-1];
+//			재영.cnt++;
+			scan.nextLine();
+			System.out.println("장바구니 확인?y/n");
+			char yn = scan.nextLine().charAt(0);
+			if (yn == 'y' || yn == 'Y')
+				System.out.println(재영);
 		}
 	}
 	
