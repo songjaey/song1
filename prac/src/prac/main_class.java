@@ -1,6 +1,25 @@
 package prac;
 
+import java.awt.event.KeyEvent;
 import java.util.Scanner;
+import java.awt.event.*;
+
+class MyKeyListener extends KeyAdapter {
+	public void keyPressed(KeyEvent e) {
+		int keyCode = e.getKeyCode();
+		switch (keyCode) {
+		case KeyEvent.VK_UP: System.out.println("가속");
+			break;
+		case KeyEvent.VK_DOWN: System.out.println("브레이크");
+			break;
+		case KeyEvent.VK_LEFT: System.out.println("왼쪽으로 이동");
+			break;
+		case KeyEvent.VK_RIGHT: System.out.println("오른쪽으로 이동");
+			break;
+		}
+	}
+}
+
 
 public class main_class {
 	
@@ -9,6 +28,7 @@ public class main_class {
 		int selec = 0;
 		//int a,b;
 		//String s,t;
+		
 		car c = new car();
 		Scanner scan = new Scanner(System.in);
 		System.out.println("배기량 입력");
@@ -54,12 +74,15 @@ public class main_class {
 		else if(selec == 3) System.out.println(ss);
 		else if(selec == 4) System.out.println(tr);
 		
-		
+		System.out.println("상,하,좌,우 키 입력");
+		MyKeyListener mykey = new MyKeyListener();
 		
 		
 	}
-
+	
 }
+
+
 
 
 
