@@ -1,10 +1,33 @@
 package inherit_test;
 
+import poly.fan;
+
 public class test {
 
 	public static void main(String[] args) {
 		
-		tv t = new tv();
+//		tv t = new tv("삼성");
+//		computer com = new computer("Dell", 4.7f, 32);
+//		aircon air = new aircon("휘센");
+//		
+//		System.out.println(t);
+//		System.out.println(air);
+//		
+//		t.power();
+//		System.out.println(t);
+		
+		house t = new tv("LG");
+		house air = new aircon("캐리어");
+		
+//		t.power();
+//		air.power();
+//		
+//		((tv)t)channel_up();
+//
+		System.out.println(t.sn);
+		house fan1 = new fan("신일");
+		System.out.println( ((fan)fan1).sn );
+		System.out.println(fan1.makedate);
 		
 	}
 
@@ -18,3 +41,33 @@ public class test {
 //	  - final이 붙은 클래스는 부모 클래스가 될 수 없다.
 
 //	  - 자식 클래스의 객체를 생성하면 부모클래스의 객체도 생성된다.
+//		(부모 클래스의 생성자메서드도 실행된다.)
+//		(자식클래스 생성자에서는 자식클래스의 역할만, 부모클래스의 변수값 저장 같은 역할은)
+//			부모클래스 생성자를 통해 이루어지도록 - 객체 지향 언어의 일반적인 규칙
+
+// 다형성
+// - 부모클래스로 자식클래스 객체를 담을 수 있는 방법
+// - 객체의 메서드가 통일되어 사용할 수 있다.
+// - 하나의 타압으로 여러 타입을 관리 할 수 있기 때문에 유지보수가 좋다.
+// - 객체의 재사용성이 쉬워지기 때문에 코드의 재사용성이 높아져 개발자가 편하다.
+// - 안정성이 높다.
+
+// 다형성 조건
+// - 상속관계 : 부모 - 자식 간 클래스 상속
+// - 오버라이딩 : 메서드의 이름, 반환타입, 매개변수가 모두 동일해야한다.
+//				메서드의 내용은 서로 다르게 작성해도 된다.
+//				부모 클래스의 메서드를 자식클래스에서도 구현되어야한다.
+//		자식클래스에 오버라이딩 된 메서드 위에는 @Override라고 명시해주는 것이 좋다.
+//		부모클래스로부터 상속받아 재구성된 메서드라고 표기해줘야 다른 개발자도 알아보기 편하고
+//		컴퓨터가 실행하는데 올바른 방식으로 실행시킬 수 있다.
+// - 업캐스팅 : 상위 타입으로 타입변환(작은->큰)
+
+//
+// 웹사이트 제작 -> 회원가입 저장
+//			  -> 
+
+
+// 오버로딩 - 생성 - 동일한 클래스에서
+// 오버라이딩 - 재정의 - 상속관계에서
+
+
