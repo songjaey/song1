@@ -27,10 +27,54 @@ public class menu {
 	}
 	@Override
 	public String toString() {
-		return null;
+		return menu_name;
 	}
 	
 	public String getMenu_name() {
 		return menu_name;
 	}
+	public int getCaffeine() {
+		return caffeine;
+	}
+	public void setCaffeine(int caffeine) {
+		this.caffeine = caffeine;
+	}
+	public int getCalorie() {
+		return calorie;
+	}
+	public void setCalorie(int calorie) {
+		this.calorie = calorie;
+	}
+	public int getM1() {
+		return m1;
+	}
+	public void setM1(int m1) {
+		this.m1 = m1;
+	}
+	public int getCost1() {
+		return cost1;
+	}
+	public void setCost1(int cost1) {
+		this.cost1 = cost1;
+	}
+	public int getCost2() {
+		return cost2;
+	}
+	public void setCost2(int cost2) {
+		this.cost2 = cost2;
+	}
+	
+	public void setType(Category type) {
+		this.type = type;
+	}
+	public void setMenu_name(String menu_name) {
+		this.menu_name = menu_name;
+	}
+	public Category getType() {
+		// TODO Auto-generated method stub
+		return type;
+	}
+	
+	
 }
+

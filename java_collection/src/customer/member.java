@@ -28,15 +28,15 @@ public class member {
 	
 	@Override
 	public String toString() {
-		return null;
+		return id+" "+password;
 	}
 	@Override
 	public boolean equals(Object o) {
 		member tmp = (member)o;
-		if( this.id.equals(tmp.id) ){ 
-			return this.password.equals(tmp.password);
+		if( this.id.equals(tmp.id) ) { // 입력한 아이디와 일치한가? 
+			return this.password.equals(tmp.password);// 입력한 비밀번호와 일치한가?
 		}
-		return false;
+		return false; // 아이디가 일치하지않으면 false 반환
 	}
 	
 	public String getId() {
